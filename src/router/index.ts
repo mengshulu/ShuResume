@@ -17,6 +17,10 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
+    
+    // will match everything and put it under `$route.params.pathMatch`
+    { path: '/:pathMatch(.*)*', redirect: "/" },
+
   ]
 })
 
